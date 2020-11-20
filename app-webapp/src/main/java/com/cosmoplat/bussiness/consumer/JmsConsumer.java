@@ -51,9 +51,9 @@ public class JmsConsumer {
                 influxDBUtils.insert("machine_info", tags, fields,System.currentTimeMillis(), TimeUnit.MILLISECONDS);
                 log.info("-------------插入时序数据库-----------tag:"+machineNumber);
                 //封装redis参数
-                /*redisUtil.set(machineNumber+"-"+String.valueOf(System.currentTimeMillis()),map);
-                redisUtil.expire(machineNumber+"-"+String.valueOf(System.currentTimeMillis()),30000);
-                log.info("-------------插入redis-----------key:"+machineNumber+"-"+String.valueOf(System.currentTimeMillis()));*/
+//                redisUtil.set(machineNumber+"-"+String.valueOf(System.currentTimeMillis()),map);
+//                redisUtil.expire(machineNumber+"-"+String.valueOf(System.currentTimeMillis()),30000);
+//                log.info("-------------插入redis-----------key:"+machineNumber+"-"+String.valueOf(System.currentTimeMillis()));
             }
             if(WebSocketServer.getOnlineCount()!=0) {
                 String machineNumeber= AssetHealthController.getMachineNumber();
