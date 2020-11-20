@@ -20,7 +20,6 @@ public class ActivemqConsumerService {
     /**
      * 使用JmsListener配置消费者监听的队列，其中name是接收到的消息
       */
-    // 使用JmsListener配置消费者监听的队列
     @JmsListener(destination = "test")
     public void handleMessage(String msg) {
         log.info("服务端成功接收queue消息成功：{}",msg);
