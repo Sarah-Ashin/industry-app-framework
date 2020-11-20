@@ -35,6 +35,7 @@ public class ActiveMQProviderController {
 
     @Autowired
     private ActiveMQTopic activeMQTopic;
+
     /**
      * 注入springboot封装的工具类
      */
