@@ -68,6 +68,4 @@ public class MachineRegisterApi {
         return  responseData;
     }
 
-
-
 }
