@@ -15,10 +15,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/userInfo")
 public class UserInfoController {
+
     @Autowired
     UserInfoService userInfoService;
+
     @Autowired
     RedisUtil redisUtil;
+
     @GetMapping("/getUser")
     public ResponseVo getUserInfoByToken(@RequestParam String token){
         String userId= String.valueOf(redisUtil.get(token));
